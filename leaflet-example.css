@@ -1,3 +1,40 @@
 #map {
-		height: 300px;
+	height: 600px;
+}
+.leaflet-1{
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	border: 2px solid red;
+	z-index: 0;
+}
+.leaflet-2{
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 25%;
+	border: 2px solid red;
+	z-index: 0;
+}
+.leaflet-3{
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	border: 2px solid red;
+		z-index: 0; 
+
+}
+.leaflet-4{
+		z-index: 0;
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 75%;
+	border: 2px solid red;
 }

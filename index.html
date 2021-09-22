@@ -3,12 +3,17 @@
   <head>
 		<meta charset="utf-8" />
     <title>Leaflet example</title>
+    <script type="text/javascript" src="./node_modules/crypto-js/crypto-js.js"></script>
+
 
 		<!-- include leaflet css and javascript -->
-		<link rel="stylesheet" crossorigin=""
-				href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
-						crossorigin=""></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
 
 		<!-- include our own css -->
 		<link rel="stylesheet" href="leaflet-example.css" />
@@ -17,23 +22,7 @@
 	</head>
 
 	<body>
-		<h1><a href="http://leafletjs.com/">Leaflet</a> example in one file</h1>
-		<p>
-			This is the html template for a <a href="http://leafletjs.com/">leaflet</a>
-			map. CSS and Javascript
-			are in different files. For a self-contained one-file-version see
-			<a href="one-file.html">one-file.html</a>. For a leaflet map without
-			Javascript programming try
-			<a href="https://lapizistik.github.io/leaflet-easymap/">Leasymap</a>.
-		</p>
-		<p>
-			Find the <a href="https://github.com/Lapizistik/leaflet-examples">source
-				code on Github</a>.
-		</p>
-		<p>
-			The one important thing is that the #map div needs a <em>height</em>
-			to be visible.
-		</p>
+		
 		<div id="map"></div>
 
 		<!-- include our own javascript -->
