@@ -1,23 +1,7 @@
-/*
- the script mus be loaded after the map div is defined.
- otherwise this will not work (we would need a listener to
- wait for the DOM to be fully loaded).
-
- Just put the script tag below the map div.
-
- The source code below is the example from the leaflet start page.
- */
-// 18104, -51192
 var map = L.map("map").setView([0, 0], 1);
-
-var md5 = CryptoJS.MD5(
-  "feb243e6-a047-4a00-a446-12cef6b3df6a/fa1d931e-19fc-11ec-b5e5-8a1a0b6c6c3d/4/3/6.png"
-).toString();
-console.log(md5);
 
 L.TileLayer.pdf = L.TileLayer.extend({
   getTileUrl: function (coords) {
-    // [top,left]=this.option.location
     const tileUrl = L.TileLayer.prototype.getTileUrl.call(this, coords);
     const completeTileUrl = `https://sp-projects-files-v1-dev.s3-ap-southeast-2.amazonaws.com/${CryptoJS.MD5(
       tileUrl
@@ -90,33 +74,6 @@ L.TileLayer.pdf = L.TileLayer.extend({
     ) {
       const tileUrl = this.getTileUrl(coords);
       tile.setAttribute("src", tileUrl);
-
-      // fetch(tileUrl)
-      //     .then(response => console.log('hereeeeeeeeeeeee', response)
-
-      //     )
-      //     .catch(error => console.log(error))
-      //     .finally(() => {
-      //          if(response.ok){
-      //     //  const blobUrl = URL.createObjectURL(response);
-      //             //   invokeUrlService.registerBlobUrl(blobUrl);
-      //             //   setTileUrl(self, done, tile, blobUrl);
-      //             tile.setAttribute('src', response.url);
-      //             done(null, tile);
-      //      }
-      // });
-
-      // var xmlHttp = new XMLHttpRequest();
-      // xmlHttp.onreadystatechange = function() {
-      //     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-      //         // callback(xmlHttp.responseText);
-      //         tile.setAttribute('src', xmlHttp.responseText);
-
-      //             done(null, tile)
-      // }
-      // xmlHttp.open("GET", tileUrl, true); // true for asynchronous
-      // xmlHttp.send(null);
-      //  tile.setAttribute('src', tileUrl);
     }
     return tile;
   },

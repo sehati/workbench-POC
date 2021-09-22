@@ -1,6 +1,3 @@
-## Examples
-
-- A html template with separate CSS and Javascript files: [index.html](https://lapizistik.github.io/leaflet-examples/)
-- A self contained one-file starter: [one-file.html](https://lapizistik.github.io/leaflet-examples/one-file.html)
-
 # workbench-POC
+
+I assumed that size of all pdfs are equal. so there is some gap tiles.
